@@ -7,37 +7,63 @@
     <title>MyResume</title>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="emit.jpeg">
+    <script src="https://kit.fontawesome.com/47c07e88e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section>
-        <div class="left-side">
-            <p><img src="emma.jpg" alt="My pic" class="pPhoto"></p>
-            <p>Home</p>
-            <p>About</p>
-            <p>Photos</p>
-            <p>Contact</p>
-        </div>
+        <aside class="left-side">
+            <a href="#home">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </a>
+            <a href="#about">
+                <i class="fa-solid fa-user"></i>
+                <p>About</p>
+            </a>
+            <a href="#photos">
+                <i class="fa-solid fa-eye"></i>
+                <p>Photos</p>
+            </a>
+            <a href="#contact"> 
+                <i class="fa-regular fa-envelope"></i>
+                <p>Contact</p>
+            </a>
+            <a href="#projects"> 
+                <i class="fa-sharp fa-solid fa-laptop-code"></i>
+                <p>Projects</p>
+            </a>
+        </aside>
         <!-- Nav bar to be displaed at media query -->
         <nav class="nav-bar">
-            <p>Home</p>
-            <p>About</p>
-            <p>Photos</p>
-            <p>Contact</p>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#photos">Photos</a>
+            <a href="#contact">Contact</a>
+            <a href="#projects">Projects</a>
         </nav>
-        <div class="right-side">
-            <h1>Hi I am Emmanuel</h1>
+        <aside class="right-side">
+            <h1 id="home">Hi I am Emmanuel</h1>
             <h2>A Web Designer and Developer</h2>
             <img src="emma.jpg" alt="A photo of me">
-            <h3>About Me</h3>
+            <h3 id="about">About Me</h3>
             <p class="about-me">
                 My name is Emmanuel a Junior web developer and a student of Makerere University. 
                 I am passionate about building responsive web designs and I do my best to produce
                 that web design that will attract people's attention.
                 Navigate my page to visit my different projects have worked on and different articles about tech.
             </p>
-        </div>
+            <div class="contacts">
+                <h2 id="contact">Contact Me</h2>
+                <hr class="con">
+                <p><i class="fa-solid fa-location-dot"></i>Kampala, Ug</p>
+                <p><i class="fa-solid fa-phone"></i>Phone: 0754017002</p>
+                <p><i class="fa-regular fa-envelope"></i>Email: ssavaemma4@gmail.com</p>
+            </div>
+            <hr>
+        </aside>
     </section>
-    <footer>
+    <footer id="projects">
+        <h2>My Projects</h2>
         <h2>Free Code Camp Solutions</h2>
         <a href="Free Code Camp Resources/catPhotoApp.html">Cat Photo App</a><br>
         <a href="Free Code Camp Resources/CafeMenu.html">Cafe Menu</a>
