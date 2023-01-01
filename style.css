@@ -94,7 +94,12 @@ footer {
 .nav-bar {
     display: none;
 }
-
+#camp, #myProjects {
+    display: inline-block;
+    margin: 0 0 10px ;
+    background-color: blueviolet;
+    
+}
 /* MEDIA QUERY */
 
 @media only screen and (max-width: 600px) {
