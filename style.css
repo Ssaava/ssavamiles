@@ -8,6 +8,7 @@ body {
     font-size: 20px;
 }
 header {
+    background-color: white;
     margin-top: 50px;
     padding: 0 20px;
     display: flex;
@@ -68,23 +69,33 @@ main {
 span {
     color: rgb(61, 13, 194);
 }
-.wave {
-    max-width: 40px;
-    height: 40px;
-    vertical-align: middle;
+@keyframes wave-me {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(30deg);}
+    50% {transform: rotate(30deg);}
+    100% {transform: rotate(0deg);}
 }
+.wave-imoji {
+    display: inline-block;
+    animation: wave-me 500ms infinite;
+    animation-play-state: running;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
 #about h2, #tech {
     font-size: 1.9em;
     margin-bottom: 30px;
 }
-#about p, #about h2 {
-    text-align: center;
-}
-img {
-    max-width: 600px;
+.roadmap {
+    display: block;
+    width: 100%;
     margin: 0 auto;
-    height: 300px;
+    height: 250px;
     margin-bottom: 30px;
+}
+.img-roadmap {
+    padding: 30px;
 }
 #tech-stack {
     display: flex;
@@ -103,14 +114,23 @@ img {
 }
 #projects {
     display: flex;
-    gap: 5px;
-    max-width: 700px;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
     flex-wrap: wrap;
 }
 .projects {
     background-color: rgb(29, 73, 80);
     width: 200px;
     height: 200px;
+    box-shadow: 10px 10px 10px 3px rgb(105, 98, 98);
+    border-radius: 12px;
+}
+.projects:hover {
+    width: 220px;
+    height: 220px;
+    transition: 1s;
+    
 }
 footer {
     margin: 150px 0 50px;
@@ -128,19 +148,33 @@ footer {
 }
 
 /* MEDIA QUERY */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 770px) {
    #nav a {
     display: none;
    }
    #nav a:nth-child(3) {
     display: block;
+    
    }
-   header {
-    gap: 100px;
+   .contact {
+    background-color: white;
    }
-   #name p{
-    width: 200px;
-   }
+    .projects {
+        width: 400px;
+        height: 150px;
+    }
+    .projects:hover {
+        width: 420px;
+        height: 170px;
+        transition: 1s;
+        
+    }
+}
+
+@media  screen and (max-width: 500px) {
+    .roadmap {
+        height: 150px;
+    }
 }
 em {
     color: red;
