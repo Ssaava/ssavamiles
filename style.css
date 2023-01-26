@@ -9,8 +9,8 @@ body {
 }
 header {
     background-color: white;
-    margin-top: 50px;
-    padding: 0 20px;
+
+    padding: 6% 3%;
     display: flex;
     position: fixed;
     top: 0;
